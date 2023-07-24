@@ -82,6 +82,9 @@ export const loadSearchResults = async function (query) {
     throw err;
   }
 };
+/**
+ * We update the results in case there is a bookmarked recipe with the same id as the one we have in the recipes array
+ */
 export const updateResults = function () {
   const arr = [];
   state.results.recipes.forEach(recipe => {
@@ -145,6 +148,11 @@ export const loadPagination = function (page = state.results.page) {
   );
   console.log(state.results.paginationRecipesBookmarks);
 };
+
+/**
+ * We use this function to check if we are on the bookmarks list page we can put the page back to 1 and render the bookmark list when needed over the result list
+ * @param {string} isList a string that is either 'true' or 'false'
+ */
 export const updateIsBookmarkList = function (isList) {
   if (isList === 'true') {
     state.results.isBookmarkList = true;
@@ -153,6 +161,11 @@ export const updateIsBookmarkList = function (isList) {
     state.results.isBookmarkList = false;
   }
 };
+
+/**
+ * With this function we update the serving and the quantity in the recipe by getting a string we get by looking at the dataset of the button and calling this function with it
+ * @param {string} upDown string that says either 'up' or 'down'
+ */
 export const updateServings = function (upDown) {
   const oldServings = state.recipe.servings;
 
@@ -163,13 +176,16 @@ export const updateServings = function (upDown) {
     if (oldServings === 1) return;
     state.recipe.servings = state.recipe.servings - 1;
   }
-  console.log(state.recipe.ingredients);
+
   state.recipe.ingredients.forEach(
     ing => (ing.quantity = (ing.quantity * state.recipe.servings) / oldServings)
   );
 };
+/**
+ *We use this function to update the bookmarks array when we click the bookmark button in the recipe
+ * @param {string} updateTo string that says either 'true' or 'false'
+ */
 export const updateBookmark = function (updateTo) {
-  console.log(updateTo);
   if (updateTo === 'true') {
     state.recipe.bookmarked = true;
     if (state.results.bookmarks.some(rec => rec.id === state.recipe.id)) {
@@ -183,15 +199,20 @@ export const updateBookmark = function (updateTo) {
       book => book.id === state.recipe.id
     );
     console.log(index);
-    console.log(state.results.bookmarks);
+
     if (index !== -1) {
       state.results.bookmarks.splice(index, 1);
     }
     state.recipe.bookmarked = false;
     return;
   }
-  console.log(state.results.bookmarks);
 };
+
+/**
+ * We use this function to update either the paginationRecipe or the paginationRecipesBookmarks array depending if we are in the bookmarks list or the result list
+ * @param {string} updateTo string that says either 'true' or 'false'
+ * @param {number} index number of the index in an array we get from the dataset
+ */
 export const updateBookmarkResults = function (updateTo, index) {
   const recipes = state.results.isBookmarkList
     ? state.results.paginationRecipesBookmarks
@@ -230,12 +251,19 @@ export const updateBookmarkResults = function (updateTo, index) {
   }
   loadPagination();
 };
+/**
+ * We use this function to add the new list of elements to the shoplistIngredients array
+ * @param {Array} liArr Array of list ingredient elements for the shoplist
+ */
 export const updateShopList = function (liArr) {
   const arr1 = liArr;
   const arr2 = state.results.shoplistIngredients;
   state.results.shoplistIngredients = [...arr2, ...arr1];
-  console.log(state.results.shoplistIngredients);
 };
+
+/**
+ * We clear the shoplistIngredients array
+ */
 export const removeShopList = function () {
   state.results.shoplistIngredients = [];
 };
