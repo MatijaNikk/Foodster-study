@@ -1,0 +1,19 @@
+.main-container {
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  width: 75vw;
+  max-width: 1550px;
+  overflow-x: hidden;
+  background-color: $container-color;
+  margin: auto;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  border-radius: 10px;
+  @media only screen and (max-width: 1550px) {
+    width: 100vw;
+
+    margin: 0;
+    border-radius: 0;
+  }
+}

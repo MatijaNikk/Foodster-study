@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/android-chrome-512x512.a6eb333c.png" type="image/x-icon">
+    <link rel="stylesheet" href="/index.75f14d4e.css">
+    <script src="/index.e37f48ea.js" defer=""></script>
+    <title>Foodster</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <div>
+          <img src="/android-chrome-512x512.a6eb333c.png" alt="header-logo" class="header-logo">
+          <h1 class="header-company-name">Foodster</h1>
+        </div>
+        <form class="search">
+          <input class="search-input" type="text" placeholder="More than a 100.000 recipies...">
+          <button class="search-btn">
+            <svg class="search-icon">
+              <use href="/icons.21bad73c.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+
+        <nav class="nav-bar">
+          <div class="nav-bookmark nav-div open-bookmark-list">
+            <h2 class="nav-headers">BOOKMARKS</h2>
+            <svg class="nav-icon">
+              <use href="/icons.21bad73c.svg#icon-bookmark"></use>
+            </svg>
+          </div>
+          <div class="nav-add-recipe nav-div open-recipe-list">
+            <h2 class="nav-headers">ADD RECIPE</h2>
+            <svg class="nav-icon">
+              <use href="/icons.21bad73c.svg#icon-edit"></use>
+            </svg>
+          </div>
+          <div class="menu">
+            <svg class="nav-menu">
+              <use href="/icons.21bad73c.svg#icon-menu"></use>
+            </svg>
+            <div class="dropdown-content">
+              <a href="#" class="open-bookmark-list">BOOKMARKS
+                <span><svg class="nav-icon-dropdown">
+                    <use href="/icons.21bad73c.svg#icon-bookmark"></use></svg></span>
+              </a>
+              <a href="#" class="open-recipe-list">ADD RECIPE
+                <svg class="nav-icon-dropdown">
+                  <use href="/icons.21bad73c.svg#icon-edit"></use></svg></a>
+              <a href="#" class="open-shoplist">SHOPLIST
+                <svg class="nav-icon-dropdown">
+                  <use href="/icons.21bad73c.svg#icon-shopcart"></use></svg></a>
+            </div>
+          </div>
+          <div class="nav-ingredients-shoplist nav-div open-shoplist">
+            <h2 class="nav-headers">SHOPLIST</h2>
+            <svg class="nav-icon">
+              <use href="/icons.21bad73c.svg#icon-shopcart"></use>
+            </svg>
+          </div>
+        </nav>
+      </header>
+      <main class="main-results">
+        <!-- <div class="message">
+          <svg class="">
+            <use href="src/img/icons.svg#icon-smile"></use>
+          </svg>
+          <h2 class="messege-header">
+            Start by searching for a recipe or an ingredient. Have fun!
+          </h2>
+        </div>
+        <div class="spinner">
+          <svg class="svg-spinner">
+            <use href="src/img/icons.svg#icon-loader"></use>
+          </svg>
+        
+        </div>
+        <div class="error-message">
+          <svg class="">
+            <use href="src/img/icons.svg#icon-alert-triangle"></use>
+          </svg>
+          <h2 class="messege-header">
+            No recipes found for your query! Please try again ;)
+          </h2> -->
+
+        <div class="sort-menu-display">
+          <!--  <div class="sort-menu">
+               <div class="query-results">
+                 <h3 class="query">Searched : <span>pizza</span></h3>
+                 <h3 class="results-number">Results : <span>10</span></h3>
+               </div>
+               <div class="sort-by">
+                 <h2>Sort by : cooking-time</h2>
+                 <span class="sort-by-btns"
+                   ><button data-up class="sort-by-btn">&uarr;</button
+                   ><button data-down class="sort-by-btn">&darr;</button></span
+                 >
+               </div>
+                
+             </div>-->
+        </div>
+        <div class="bookmarks-view"></div>
+        <div class="search-results">
+          <div class="message">
+            <svg class="">
+              <use href="/icons.21bad73c.svg#icon-smile"></use>
+            </svg>
+            <h2 class="messege-header">
+              Start by searching for a recipe or an ingredient. Have fun!
+            </h2>
+          </div>
+
+          <!--  <ul class="results">
+            <li class="result">
+              <a href="#" class="result-id">
+                <div class="result-left-div">
+                  <figure class="result-image">
+                    <img src="src\img\android-chrome-512x512.png" alt="Pizza" />
+                  </figure>
+                  <div class="result-description">
+                    <h4 class="result-name">Pizza time</h4>
+                    <p class="result-publisher">The pizzanator</p>
+                  </div>
+                </div>
+
+                <div class="result-cooking-time">
+                  <svg class="">
+                    <use href="src/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  <h2 class="cooking-time">60 minutes</h2>
+                </div>
+                <div class="result-add-bookmark">
+                  <button class="result-bookmark-btn">
+                    <svg class="">
+                      <use href="src/img/icons.svg#icon-bookmark"></use>
+                    </svg>
+                    <h2 class="add-bookmark">Add bookmark</h2>
+                  </button>
+                </div>
+              </a>
+            </li>
+          </ul> -->
+          <!--  <div class="bottom">
+            <div class="page-navigation">
+               
+              <button class="page-navigation-btn page-prev">
+                <svg class="">
+                  <use href="src/img/icons.svg#icon-arrow-left"></use>
+                </svg>
+                Page 1
+              </button>
+              <h2 class="current-page">Page 2</h2>
+              <button class="page-navigation-btn page-next">
+                Page 3
+                <svg class="">
+                  <use href="src/img/icons.svg#icon-arrow-right"></use>
+                </svg>
+              </button>
+              
+            </div>
+          </div> -->
+        </div>
+
+        <div class="recipe recipe-display">
+          <!-- <div class="recipe-image">
+            <button class="go-back">
+              <svg class="">
+                <use href="src/img/icons.svg#icon-arrow-left"></use>
+              </svg>
+              GO BACK
+            </button>
+            <img src="src\img\chad-pizza.jpg" alt="pizza" />
+          </div>
+          <div class="recipe-name"><h1 class="recipe-name-header">Gigachad Pizza Gigachad Pizza Gigachad Pizza Gigachad Pizza </h1></div>
+          
+          <div class="recipe-data-container">
+            <div class="recipe-data">
+              <div>
+                <svg class="">
+                  <use href="src/img/icons.svg#icon-clock"></use>
+                </svg>
+                <p>
+                  <span class="highlight">50</span>
+                  MIN<span class="delete">UTES</span>
+                </p>
+              </div>
+              <div>
+                <svg class="">
+                  <use href="src/img/icons.svg#icon-users"></use>
+                </svg>
+                <p>
+                  <span class="highlight">4</span>
+                  SERV<span class="delete">INGS</span>
+                </p>
+              </div>
+              <div>
+                <button>
+                  <svg class="">
+                    <use href="src/img/icons.svg#icon-plus-circle"></use>
+                  </svg>
+                </button>
+                <button>
+                  <svg class="">
+                    <use href="src/img/icons.svg#icon-minus-circle"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="recipe-bookmark-shopcart">
+              <div><h3 class="delete">ADD TO :</h3></div>
+              <div>
+                <button>
+                  <svg class="">
+                    <use href="src/img/icons.svg#icon-shopcart"></use>
+                  </svg>
+                </button>
+                <button>
+                  <svg class="">
+                    <use href="src/img/icons.svg#icon-bookmark"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="recipe-ingredients">
+            <h2 class="recipe-ingredients-header">RECIPE INGREDIENTS</h2>
+            <ul class="ingredients">
+              <li class="ingredient">
+                <svg class="">
+                  <use href="src/img/icons.svg#icon-check"></use>
+                </svg>
+                <p>For the pizza dough:</p>
+              </li>
+              <li class="ingredient">
+                <svg class="">
+                  <use href="src/img/icons.svg#icon-check"></use>
+                </svg>
+                <p>3/4 cup warm water</p>
+              </li>
+              <li class="ingredient">
+                <svg class="">
+                  <use href="src/img/icons.svg#icon-check"></use>
+                </svg>
+                <p>3/4 cup warm water</p>
+              </li>
+              <li class="ingredient">
+                <svg class="">
+                  <use href="src/img/icons.svg#icon-check"></use>
+                </svg>
+                <p>3/4 cup warm water</p>
+              </li>
+            </ul>
+          </div>
+          <div class="recipe-publisher-link">
+            <h2 class="publisher-header">HOW TO COOK IT</h2>
+            <p class="publisher-paragraph">
+              This recipe was carefully designed and tested by
+              <span class="highlight">A Spicy Perspective</span>. Please check
+              out directions at their website.
+            </p>
+            <button class="publisher-button">
+              DIRECTIONS
+
+              <svg class="">
+                <use href="src/img/icons.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div> 
+         -->
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

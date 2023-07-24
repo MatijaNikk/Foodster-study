@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+$container-color: rgb(173, 216, 230);
+$button-color: rgb(211, 229, 236);
+$button-color-hover: rgb(158, 190, 200);
+$body-background-color: linear-gradient(#423a26, #972f27);
+$dropdown-color: rgb(211, 229, 236);
+$dropdown-color-hover: rgb(158, 190, 200);
+$result-background-color: rgb(224, 255, 255);
+$result-background-color-hover: rgb(186, 212, 212);
+$pagination-page-color: rgb(255, 142, 142);
+$background-linear-color: linear-gradient(to right bottom, #77c1f5, #898ca4);
+$shopping-bookmark-color: #f48982;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+html {
+  position: relative;
+  font-size: 62.5%;
+  @media only screen and (max-width: 1000px) {
+    font-size: 50%;
+  }
+}
+
+body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: $body-background-color;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+ul {
+  list-style-type: none;
+}
+svg {
+  width: 2rem;
+  height: 2rem;
+}
+a {
+  text-decoration: none;
+}
+button {
+  padding: 0.5rem;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+h2 {
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
+}
+h1 {
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+
+.hide {
+  display: none;
+}
