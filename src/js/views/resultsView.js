@@ -76,7 +76,7 @@ class ResultsView extends View {
   <svg class="">
     <use href="${icons}#icon-bookmark${result.bookmarked ? '-fill' : ''}"></use>
   </svg>
-  <h2 class="add-bookmark">${result.bookmarked ? 'Un' : 'Add'} bookmark</h2>
+  <h2 class="add-bookmark"> Bookmark</h2>
 </button>
 </div>
 </li>`;

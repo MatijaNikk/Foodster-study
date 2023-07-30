@@ -19,7 +19,7 @@ class SortMenuView extends View {
                  <h3 class="results-number">Results : <span>${data[1]}</span></h3>
                </div>
                <div class="sort-by">
-                 <h2>Sort by : cooking-time</h2>
+                 <h2>cooking-time</h2>
                  <span class="sort-by-btns"
                    ><button data-up="up"  class="sort-by-btn">&uarr;</button
                    ><button data-down="down"  class="sort-by-btn">&darr;</button></span

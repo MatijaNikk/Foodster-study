@@ -87,7 +87,7 @@ const controlResults = async function (data) {
       model.state.results.recipeCount
     );
   } catch (err) {
-    resultsView.renderError(err);
+    resultsView.renderError();
     console.error(err);
   }
 };

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-$container-color: rgb(173, 216, 230);
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=REM:wght@900&display=swap');
+$container-color: #fff;
 $button-color: rgb(211, 229, 236);
 $button-color-hover: rgb(158, 190, 200);
 $body-background-color: linear-gradient(#423a26, #972f27);
@@ -21,7 +21,6 @@ $shopping-bookmark-color: #f48982;
   box-sizing: border-box;
   font-family: inherit;
 }
-
 html {
   position: relative;
   font-size: 62.5%;
@@ -33,6 +32,7 @@ html {
 body {
   height: 100%;
   font-family: 'Inter', sans-serif;
+  font-weight: bolder;
   background: $body-background-color;
 }
 ::-webkit-scrollbar {
